@@ -149,6 +149,6 @@ class Adapter: PCGame
         else { return 18; }
     }
     public bool isTripleAGame() { return (ComputerGame.getBudgetInMillionsOfDollars() > 50); }
-    public Requirements getRequirements() { return new Requirements(ComputerGame.getMinimumGpuMemoryInMegabytes(), ComputerGame.getDiskSpaceNeededInGB(), ComputerGame.getRamNeededInGb(), ComputerGame.getCoreSpeedInGhz(), ComputerGame.getCoresNeeded()); }
+    public Requirements getRequirements() { return new Requirements(ComputerGame.getMinimumGpuMemoryInMegabytes() / 1024, ComputerGame.getDiskSpaceNeededInGB(), ComputerGame.getRamNeededInGb(), ComputerGame.getCoreSpeedInGhz(), ComputerGame.getCoresNeeded()); }
     public Adapter(ComputerGame computerGame) { ComputerGame = computerGame; }
 }
